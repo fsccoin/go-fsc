@@ -52,14 +52,13 @@ contract Ownable {
 
 }
 
-contract ERC20Basic {
-    );
+contract FSC20Basic {
     function balanceOf(address who) public view returns (uint256);
     function transfer(address to, uint256 value) public returns (bool);
     event Transfer(address indexed from, address indexed to, uint256 value);
 }
 
-contract BasicToken is ERC20Basic {
+contract BasicToken is FSC20Basic {
     using SafeMath for uint256;
 
     mapping(address => uint256) balances;
@@ -74,14 +73,14 @@ contract BasicToken is ERC20Basic {
     }
 
 }
-contract ERC20 is ERC20Basic {
+contract FSC20 is FSC20Basic {
     function allowance(address owner, address spender) public view returns (uint256);
     function transferFrom(address from, address to, uint256 value) public returns (bool);
     function approve(address spender, uint256 value) public returns (bool);
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
-contract StandardToken is ERC20, BasicToken {
+contract StandardToken is FSC20, BasicToken {
 
     mapping (address => mapping (address => uint256)) internal allowed; 
                      

@@ -139,7 +139,7 @@ contract StandardToken is FSC20, BasicToken {
     }
 }
 
-contract FiveStarCoinPro is StandardToken 
+contract PlatinumProCoin is StandardToken 
 {
        string public constant name= "Platinum Pro Coin";
        string public constant symbol = "PPC";
